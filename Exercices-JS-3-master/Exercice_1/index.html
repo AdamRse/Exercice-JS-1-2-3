@@ -6,5 +6,14 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1"/>
+
+      <script>
+        document.querySelector("#image1").addEventListener("mouseenter", function(){
+          this.style.border = "3px solid #f65";
+        })
+        document.querySelector("#image1").addEventListener("mouseleave", function(){
+          this.style.border = "none";
+        })
+      </script>
   </body>
 </html>

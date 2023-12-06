@@ -16,5 +16,17 @@
   <div class="color red" ></div>
   <div class="color blue" ></div>
 </div>
+
+<script>
+  let txt = document.querySelector("#text");
+
+  document.querySelectorAll(".color").forEach(function(div){
+      div.addEventListener("click", function(){
+        txt.style.color = this.className.split(" ")[1];
+      });
+    });
+
+
+</script>
 </body>
 </html>

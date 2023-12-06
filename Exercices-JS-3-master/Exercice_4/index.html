@@ -10,5 +10,25 @@
     <label for="confirmPassword">Confirmez : </label><input type="text" name="confirmPassword" id="confirmPassword" />
     <button type="button" name="button" >Vérification</button>
   </form>
+
+  <script>
+    document.querySelector("button").addEventListener("click", function(){
+      let inputs = document.querySelectorAll("input");
+
+      if(inputs[0].value != "" && inputs[1].value != ""){
+        if(inputs[0].value !== inputs[1].value){
+          inputs.forEach(function(i){
+            i.style.border = "1px solid #f62";
+          });
+        }
+        else{
+          inputs.forEach(function(i){
+            i.style.border = "1px solid #2f6";
+          });
+        }
+      }
+    });
+
+  </script>
 </body>
 </html>
