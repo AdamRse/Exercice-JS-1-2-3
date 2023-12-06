@@ -6,7 +6,13 @@
 </head>
 <body>
   <form>
-    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" />
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" value="Ha" />
   </form>
+
+  <script>
+    document.body.addEventListener("keypress", function(){
+      alert(document.querySelector("#lastname").value);
+    })
+  </script>
 </body>
 </html>

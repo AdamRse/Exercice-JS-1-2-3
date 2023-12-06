@@ -6,5 +6,21 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1" />
+
+      
+      <script>
+
+
+        let img = document.querySelector("#image1");
+
+        img.addEventListener("mouseenter", function(){
+            this.src="images/image1_2.jpg";
+        })
+        img.addEventListener("mouseleave", function(){
+            this.src="images/image1.jpg";
+        })
+
+
+      </script>
   </body>
 </html>

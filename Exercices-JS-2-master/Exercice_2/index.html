@@ -8,5 +8,14 @@
   <form>
     <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname"/>
   </form>
+
+  <script>
+    //https://stackoverflow.com/questions/45730090/whats-the-difference-between-click-and-onclick-in-javascript
+
+    document.querySelector("#lastname").addEventListener("focusout", function(){
+      alert("Merci de votre participation, chèr(e) "+this.value);
+    })
+
+  </script>
 </body>
 </html>

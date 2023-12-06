@@ -11,5 +11,22 @@
     <label for="city">Votre ville  : </label><input type="text" name="city" value="New York" id="city" />
     <button type="button" name="button">RAZ</button>
   </form>
+
+  <script>
+    //Manière principale
+    //document.querySelector("button").addEventListener("click", function(){
+    //  document.querySelectorAll("input").forEach(function(i){
+    //    i.value = "";
+    //  });
+    //});
+
+    //via le dom-0 (obsolète mais sympa)
+    document.querySelector("button").onclick = function(){
+      document.querySelectorAll("input").forEach(function(i){
+        i.value = "";
+      });
+
+    };
+  </script>
 </body>
 </html>

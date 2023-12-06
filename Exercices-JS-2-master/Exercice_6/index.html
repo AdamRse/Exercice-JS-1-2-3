@@ -11,4 +11,19 @@
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
   </body>
+
+  <script>
+    document.querySelectorAll("img").forEach(function(img){
+
+      img.addEventListener("mouseenter", function(){
+        this.src = "./images/"+this.id+"_2.jpg";
+      });
+
+      img.addEventListener("mouseleave", function(){
+        this.src = "./images/"+this.id+".jpg";
+      });
+      
+    });
+
+  </script>
 </html>
