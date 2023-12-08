@@ -14,18 +14,31 @@
   </div>
 
   <script>
+    //je séléctionne la balise texte
     let txt = document.querySelector("#text");
     
+    //je sélectionne tous les <a></a> de la page dans un tableau
+    //je parcours le tableau [a, a] avec un foreach
     document.querySelectorAll("a").forEach(function(a){
-    if(a.innerHTML == "Afficher"){
-      a.addEventListener("click", function(){
-        txt.style.display = "block";
-      });
-    }
-    else{
-      a.addEventListener("click", function(){
-          txt.style.display = "none";
-      });
+
+      //Si dans l'élément <a> ,J'ai le texte "Afficher"
+      if(a.innerHTML == "Afficher"){
+
+        //Alors je créé un événement onclick sur ce <a>
+        a.addEventListener("click", function(){
+
+          //Quand on clique sur le bouton <a>, je l'affiche avec display: block, c'est du css
+          txt.style.display = "block";
+        });
+      }
+      else{//Sinon (Si <a> est diffirent de "Afficher")
+
+        //Alors je créé un évenement click sur ce <a>
+        a.addEventListener("click", function(){
+
+            //Qui va mettre la propriété display de css à none (et donc le faire disparaitre)
+            txt.style.display = "none";
+        });
     }
     });
 
