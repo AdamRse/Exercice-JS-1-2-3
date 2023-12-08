@@ -8,9 +8,17 @@
       <img src="images/image1.jpg" id="image1"/>
 
       <script>
+        //Je sélectionne l'image1 à laquelle j'applique l'event mouseenter
         document.querySelector("#image1").addEventListener("mouseenter", function(){
+
+          //this fait référence à l'objet dans lequel il est placé, donc ici this == document.querySelector("#image1");
+          //J'applique une bordure rouge de 3 pixels à this, donc à image1
+          //On peut lire à l'envers en remplaçant les "."" par "de" et les "=" par "dans"
+          //Exemple : "3px solid #f65" DANS border DE style DE this
           this.style.border = "3px solid #f65";
         })
+
+        //Meme chose mais avec l'événement mouseleave, et en effaçant les bordures.
         document.querySelector("#image1").addEventListener("mouseleave", function(){
           this.style.border = "none";
         })
