@@ -12,17 +12,33 @@
   </form>
 
   <script>
+    //Je sélectionne le bouton de la page auquel j'applique un événement click
     document.querySelector("button").addEventListener("click", function(){
+
+      //Je sélectionne tous les inputs de la page dans un tableau [input, input]
+      //Il est important de les sélectionner DANS l'événement click, car on aura la valeur de l'input au moment où on déclenche l'événement clic
       let inputs = document.querySelectorAll("input");
 
+      //Si le premier input n'est pas vide ET le 2ème input n'est pas vide (sinon je ne fait rien car pas de else)
       if(inputs[0].value != "" && inputs[1].value != ""){
+
+        //Si la veleur de du premier input N'EST PAS EGALE à la valeur du deuxième input
         if(inputs[0].value !== inputs[1].value){
+
+          //Je parcours le tableau de querySelectorAll("input") qui contient [input, input]
+          //Chaque input parcouru sera représenté par la variable i que je nomme dans function()
           inputs.forEach(function(i){
+
+            //J'applique une bordure rouge à l'input
             i.style.border = "1px solid #f62";
           });
         }
-        else{
+        else{//Sinon (si la veleur de du premier input EST EGALE à la valeur du deuxième input)
+
+          //Je parcours le tableau inputs [input, input], chaque input parcouru sera représenté par la variable i que je nomme dans function()
           inputs.forEach(function(i){
+
+            //J'applique une bordure verte à l'input
             i.style.border = "1px solid #2f6";
           });
         }
