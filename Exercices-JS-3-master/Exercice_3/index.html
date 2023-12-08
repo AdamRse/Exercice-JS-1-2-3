@@ -18,10 +18,19 @@
 </div>
 
 <script>
+  //Je sélectionne la <div> avec l'id text
   let txt = document.querySelector("#text");
 
+  //je sélectionne tous les class color de la page dans un tableau
+  //je parcours le tableau [div, div, div] avec un foreach
   document.querySelectorAll(".color").forEach(function(div){
+
+      //Je créé un event click sur une div
       div.addEventListener("click", function(){
+
+        //this -> la div, fait référence à l'objet qui l'apelle, donc ici div (vu qu'on est dans div.classEventListener())
+        //className.split(" ") -> Je prends les classes de la div que je met dans un tableau ["color", "green"] par ex
+        //[1] -> 2ème index du tableau, donc la class green ou red ou blue en fonction de la div qui est parcourue 
         txt.style.color = this.className.split(" ")[1];
       });
     });
